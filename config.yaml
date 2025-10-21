@@ -1,0 +1,12 @@
+rules:
+  eating_violation:
+    min_duration_sec: 30        # continuous duration (2 minutes), canoot adjust for testing
+    min_frames: 20               # must appear in at least this many frames
+    ignore_objects: []   # ignore bottle (optional)
+    confidence_threshold: 0.6    # only count if model confidence > this
+    min_people_detected: 1       # only count when human(s) are detected
+    min_gap_sec: 30 # maximum gap (seconds) to merge consecutive frames into one session
+
+visuals:
+  time_bin_minutes: 5            # for aggregation granularity
+  show_session_overlay: true     # highlight true eating sessions
